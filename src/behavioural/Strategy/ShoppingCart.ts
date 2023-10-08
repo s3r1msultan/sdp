@@ -1,4 +1,4 @@
-import { DiscountStrategy } from "./DiscountStrategy";
+import { DiscountStrategy } from "./DiscountStrategy.js";
 
 export class ShoppingCart {
   private items: { name: string; price: number }[] = [];
