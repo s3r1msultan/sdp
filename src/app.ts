@@ -7,6 +7,8 @@ import { BasicTextDocument } from "./structural/decorator/BasicTextDocument.js";
 import { BoldTextDecorator } from "./structural/decorator/BoldTextDecorator.js";
 import { ItalicTextDecorator } from "./structural/decorator/ItalicTextDecorator.js";
 
+// Strategy pattern
+
 const withoutDiscount = new WithoutDiscount();
 const tenPercentDiscount = new PercentageDiscount(10);
 const fixedDiscount = new FixedDiscount(5);
@@ -35,6 +37,8 @@ cart.setDiscountStrategy(fixedDiscount);
 console.log("Итого с фиксированной скидкой $5:", cart.totalSum() + "$");
 
 console.log();
+
+// Decorator pattern
 
 const text = question("Enter some text: ");
 
