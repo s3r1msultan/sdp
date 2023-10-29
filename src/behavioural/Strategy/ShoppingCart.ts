@@ -1,9 +1,9 @@
-import { DiscountStrategy } from "./DiscountStrategy.js";
+import { IDiscountStrategy } from "./IDiscountStrategy.js";
 
 export class ShoppingCart {
   private items: { name: string; price: number }[] = [];
 
-  constructor(private discountStrategy: DiscountStrategy) {}
+  constructor(private discountStrategy: IDiscountStrategy) {}
 
   addItem(name: string, price: number): void {
     this.items.push({ name, price });
@@ -16,7 +16,7 @@ export class ShoppingCart {
     console.log();
   }
 
-  public setDiscountStrategy(discountStrategy: DiscountStrategy) {
+  public setDiscountStrategy(discountStrategy: IDiscountStrategy) {
     this.discountStrategy = discountStrategy;
   }
 

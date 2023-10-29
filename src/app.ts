@@ -1,3 +1,5 @@
+import CheckersPieceFactory from "./creational/factory/CheckersPieceFactory.js";
+import ChessPieceFactory from "./creational/factory/ChessPieceFactory.js";
 import { ListMPS } from "./structural/adapter/ListMPS.js";
 import { MsToKhAdapter } from "./structural/adapter/MsToKhAdapter.js";
 
@@ -64,3 +66,22 @@ msToKhAdapter.addSpeed(144);
 console.log(listMPS.getSpeeds());
 
 console.log(msToKhAdapter.getSpeeds());
+
+// Factory Pattern
+
+const chessPieceFactory = new ChessPieceFactory();
+const checkersPiecesFactory = new CheckersPieceFactory();
+
+const rook = chessPieceFactory.createPiece("rook");
+const queen = chessPieceFactory.createPiece("queen");
+
+const checker = checkersPiecesFactory.createPiece("checker");
+const king = checkersPiecesFactory.createPiece("king");
+
+console.log();
+
+rook.move();
+queen.move();
+
+checker.move();
+king.move();
