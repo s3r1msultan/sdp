@@ -57,8 +57,8 @@ import { MsToKhAdapter } from "./structural/adapter/MsToKhAdapter.js";
 const listMPS = new ListMPS();
 const msToKhAdapter = new MsToKhAdapter(listMPS);
 
-listMPS.add(100);
-listMPS.add(200);
+listMPS.addSpeed(100);
+listMPS.addSpeed(200);
 
 msToKhAdapter.addSpeed(180);
 msToKhAdapter.addSpeed(144);

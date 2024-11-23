@@ -9,6 +9,6 @@ export class MsToKhAdapter implements ISpeedAdapter {
     return this.ListMPS.getSpeeds().map((speed) => speed * 3.6);
   }
   addSpeed(speed: number): void {
-    this.ListMPS.add(speed / 3.6);
+    this.ListMPS.addSpeed(speed / 3.6);
   }
 }

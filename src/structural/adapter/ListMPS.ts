@@ -1,6 +1,6 @@
 export class ListMPS {
   private speeds: number[] = [];
-  add(speed: number): void {
+  addSpeed(speed: number): void {
     this.speeds.push(speed);
   }
   getSpeeds(): number[] {
